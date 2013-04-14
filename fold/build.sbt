@@ -9,7 +9,10 @@ resolvers ++= Seq(
   "releases"  at "http://oss.sonatype.org/content/repositories/releases"
 )
 
-libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+libraryDependencies ++= Seq(
+  "org.scalacheck" %% "scalacheck" % "1.10.0" % "test",
+  "org.specs2" %% "specs2" % "1.13" % "test"
+)
 
 
 

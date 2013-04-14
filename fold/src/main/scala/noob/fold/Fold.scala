@@ -37,11 +37,11 @@ object Fold {
   // PART 3: Common operations in terms of fold. 
 
   // Implement `filter` in terms of fold.
-  def filter[A](as:List[A])(f: A => Boolean):List[A] = 
+  def filter[A](as:List[A])(f:A => Boolean):List[A] = 
     ???
 
   // Implement `map` in terms of fold. 
-  def map[A,B](as:List[A])(f: A => B):List[B] = 
+  def map[A,B](as:List[A])(f:A => B):List[B] = 
     ???
 
   // Implement `distinct` in terms of a fold. This function should remove

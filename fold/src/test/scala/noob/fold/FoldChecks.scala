@@ -1,33 +1,19 @@
 package noob.fold
 
-import org.scalacheck.Properties
-import org.scalacheck.Prop.forAll
+import org.specs2._
+import org.scalacheck._
 
-object QuoteCheck extends Properties("Fold") {
+object QuoteCheck extends Specification with ScalaCheck { def is =
 
-  property("sumL") = 
-    forAll((ns: List[Int]) => Fold.sumL(ns) == ns.sum )
-  
-  property("sumR") = 
-    forAll((ns: List[Int]) => Fold.sumR(ns) == ns.sum )
-  
-  property("concat") = 
-    forAll((ss:List[String]) => Fold.concat(ss) == ss.flatten.mkString)
+  "sumL"     ! prop { (ns: List[Int]) => Fold.sumL(ns) == ns.sum } ^
+  "sumR"     ! prop { (ns: List[Int]) => Fold.sumR(ns) == ns.sum } ^
+  "concat"   ! prop { (ss:List[String]) => Fold.concat(ss) == ss.flatten.mkString } ^
+  "mystery1" ! prop { (ns:List[Int]) => Fold.mystery1(ns) == ns.reverse } ^
+  "mystery2" ! prop { (ns:List[Int]) => Fold.mystery2(ns) == ns } ^
+  "filter"   ! prop { (ns:List[Int]) => Fold.filter(ns)(even) == ns.filter(even) } ^
+  "map"      ! prop { (ss:List[String]) => Fold.map(ss)(_.length) == ss.map(_.length) }
 
-  property("mystery1") = 
-    forAll((ns:List[Int]) => Fold.mystery1(ns) == ns.reverse)
-
-  property("mystery2") = 
-    forAll((ns:List[Int]) => Fold.mystery2(ns) == ns)
-
-  property("filter") = {
-    def even(n:Int) = (n % 2) == 0
-    forAll((ns:List[Int]) => Fold.filter(ns)(even) == ns.filter(even))
-  }
-
-  property("map") = {
-    forAll((ss:List[String]) => Fold.map(ss)(_.length) == ss.map(_.length))
-  }
+  def even(n:Int) = (n % 2) == 0 
 
 }
 
