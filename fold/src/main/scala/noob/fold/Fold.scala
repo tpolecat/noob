@@ -3,12 +3,11 @@ package noob.fold
 object Fold {
 
   // Fill in the implementations by replacing ??? with code that works.
-  // You can run ~test in your sbt console to check your work as you go.
+  // You can use `test` in sbt to check your work, or `console` to try out your functions.
 
   // PART 1: Folding with symmetric functions
 
-  // Sum the given `List[Int]` starting from the left. The sum of an empty list 
-  // is zero. 
+  // Sum the given `List[Int]` starting from the left. The sum of an empty list  is zero. 
   def sumL(ns:List[Int]):Int = 
     ns.foldLeft(???)(???)
 
@@ -23,14 +22,14 @@ object Fold {
 
   // PART 2: Folding with asymmetric functions
 
-  // Fold up a list by constructing another list with the same elements as the
-  // original list. Here you need to distinguish which argument is which because 
-  // the accumulator is of a different type. What does this function do?
+  // Fold up a list by constructing another list with the same elements as the original list. Here 
+  // you need to distinguish which argument is which because the accumulator is of a different type. 
+  // What does this function do?
   def mystery1[A](as:List[A]):List[A] =
     as.foldLeft(List.empty[A])(???)
 
-  // Now try it with `foldRight`. What does this function do? What can we say 
-  // about the difference between `foldLeft` and `foldRight`>
+  // Now try it with `foldRight`. What does this function do? What can we say about the difference 
+  // between `foldLeft` and `foldRight`>
   def mystery2[A](as:List[A]):List[A] =
     ???
 

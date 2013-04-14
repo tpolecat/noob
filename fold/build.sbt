@@ -14,5 +14,5 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "1.13" % "test"
 )
 
-
+initialCommands in console := "import noob.fold.Fold._"
 
