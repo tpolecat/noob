@@ -5,48 +5,45 @@ object Fold {
   // Fill in the implementations by replacing ??? with code that works.
   // You can use `test` in sbt to check your work, or `console` to try out your functions.
 
-  // PART 1: Folding with symmetric functions
+  // PART 1: Commutative Folding
 
-  // Sum the given `List[Int]` starting from the left. The sum of an empty list  is zero. 
-  def sumL(ns:List[Int]):Int = 
-    ns.foldLeft(???)(???)
+  // (1.1) Find the sum of a list of integers using `fold`. The sum of an empty list is zero. 
+  def sum(ns:List[Int]):Int = 
+    ns.fold(???)(???)
 
-  // Sum the given `List[Int]` starting from the right.
-  def sumR(ns:List[Int]):Int = 
+  // (1.2) Concatenate a list of strings using `fold`.
+  def concat(ns:List[String]):String = 
     ???
 
-  // Concatenate the given `List[String]` into a single string.
-  // Does it matter which way you go?
-  def concat(ss:List[String]):String = 
-    ???
+  // PART 2: Noncommutative Folding
 
-  // PART 2: Folding with asymmetric functions
-
-  // Fold up a list by constructing another list with the same elements as the original list. Here 
+  // (2.1) Fold up a list using `foldLeft` and construct another list with the same elements. Here 
   // you need to distinguish which argument is which because the accumulator is of a different type. 
-  // What does this function do?
+  // What does this mystery function do?
   def mystery1[A](as:List[A]):List[A] =
     as.foldLeft(List.empty[A])(???)
 
-  // Now try it with `foldRight`. What does this function do? What can we say about the difference 
-  // between `foldLeft` and `foldRight`>
+  // (2.2) Now try it with `foldRight`. What does this function do? 
+  // What can we say about the difference between `foldLeft` and `foldRight`?
   def mystery2[A](as:List[A]):List[A] =
     ???
 
   // PART 3: Common operations in terms of fold. 
 
-  // Implement `filter` in terms of fold.
+  // (3.1) Implement `length` in terms of a fold.
+  def length[A](as:List[A]):Int =
+    ???
+
+  // (3.2) Implement `filter` in terms of a fold.
   def filter[A](as:List[A])(f:A => Boolean):List[A] = 
     ???
 
-  // Implement `map` in terms of fold. 
+  // (3.3) Implement `map` in terms of a fold. 
   def map[A,B](as:List[A])(f:A => B):List[B] = 
     ???
 
-  // Implement `distinct` in terms of a fold. This function should remove
-  // duplicates, returning a list in which only the first occurrence of an
-  // element occurs. Don't worry about complexity; O(N^2) is fine. As a bonus,
-  // use a more complex accumulator to implement `distinct` in O(N log N) time.
+  // (3.4 - harder) Implement `distinct` in terms of fold. You can use `contains(a)` to determine 
+  // whether an element exists in a list. Don't worry about efficiency.
   def distinct[A](as:List[A]):List[A] = 
     ???
 
