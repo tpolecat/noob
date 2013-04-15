@@ -5,18 +5,8 @@ A set of 20-minute talks and exercises for **noob hour** at PDXScala. The goal i
 
 So far there is:
 
-* `fold/` - an introduction to folding over lists.
-
-Some ideas:
-
-* Intro to typeclasses? Monoid?
-
-Longer talks?
-
-* Implement monads for `Id[A]`, `A => B` (this is `Reader[A,B]`), and `A => M[B]` (this is `Kleisli[M,A,B]`). Then show how `Reader[A,B]` is actually `Kleisli[Id,A,B]`. Replace `Id` with something else and see what happens.
-
-
-
+* **IN PROGRESS** `fold/` - an introduction to folding over lists.
+* **IN PROGRESS** `evidence/` - using type constraints.
 
 
 
