@@ -1,4 +1,4 @@
-name := "noob-evidence"
+name := "noob-constraints"
 
 version := "0.1"
 
