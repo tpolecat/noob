@@ -23,7 +23,7 @@ object Evidence {
 
     // (2) Return the length of `a`. 
     // Calls to this method should compile only if `A` is some kind of `Seq`.
-    def length = ??? // a.length
+    def length: Int = ??? // a.length
 
     // (3) Does `Box("foo").length` work? If not, why not? Go back and fix it! 
 
@@ -41,7 +41,7 @@ object Evidence {
     
     // (7) Return the sum of two boxes.
     // Calls to this method should compile for any `Numeric` type `A`.
-    def +(other:Box[A]):Box[A] = ??? // Box(a + other.a)
+    def +(other:Box[A]): Box[A] = ??? // Box(a + other.a)
 
   }
   
