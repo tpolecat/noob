@@ -3,9 +3,9 @@ package noob.fold
 import org.specs2._
 import org.scalacheck._
 
-object QuoteCheck extends Specification with ScalaCheck { def is =
+object FoldCheck extends Specification with ScalaCheck { def is =
 
-  "sum"      ! prop { (ns:List[Int])    => Fold.sum(ns) == ns.sum }                    ^
+  "sum"      ! prop { (ns:List[Int])    => Fold.sum(ns) == ns.sum }                     ^
   "concat"   ! prop { (ss:List[String]) => Fold.concat(ss) == ss.flatten.mkString }     ^
   "mystery1" ! prop { (ns:List[Int])    => Fold.mystery1(ns) == ns.reverse }            ^
   "mystery2" ! prop { (ns:List[Int])    => Fold.mystery2(ns) == ns }                    ^

@@ -11,4 +11,8 @@ So far there are exercises and tests for:
 Ideas:
 
 * Variance
+* Intro to Typeclasses
+* For comprehensions
+* String interpolation
+* Extractors
 

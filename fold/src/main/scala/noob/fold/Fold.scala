@@ -5,7 +5,7 @@ object Fold {
   // Fill in the implementations by replacing ??? with code that works.
   // You can use `test` in sbt to check your work, or `console` to try out your functions.
 
-  // PART 1: Commutative Folding
+  // PART 1: Associative Folding
 
   // (1.1) Find the sum of a list of integers using `fold`. The sum of an empty list is zero. 
   def sum(ns:List[Int]):Int = 
@@ -15,7 +15,7 @@ object Fold {
   def concat(ns:List[String]):String = 
     ???
 
-  // PART 2: Noncommutative Folding
+  // PART 2: Non-associative Folding
 
   // (2.1) Fold up a list using `foldLeft` and construct another list with the same elements. Here 
   // you need to distinguish which argument is which because the accumulator is of a different type. 
